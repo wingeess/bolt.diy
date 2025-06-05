@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPixel - Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>RetroPixel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Shopping Cart</h1>
+
+        <section id="cart-items">
+            <h2>Your Items</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items-body">
+                    <!-- Cart items will be dynamically inserted here by JavaScript -->
+                    <!-- Example of a cart item (will be removed once JS is active) -->
+                    <tr>
+                        <td>Super Nintendo Console</td>
+                        <td>€150</td>
+                        <td>
+                            <input type="number" value="1" min="1" class="item-quantity" data-id="snes_console">
+                        </td>
+                        <td>€150</td>
+                        <td><button class="remove-item" data-id="snes_console">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td>Zelda: Ocarina of Time (N64)</td>
+                        <td>€60</td>
+                        <td>
+                            <input type="number" value="2" min="1" class="item-quantity" data-id="zelda_oot">
+                        </td>
+                        <td>€120</td>
+                        <td><button class="remove-item" data-id="zelda_oot">Remove</button></td>
+                    </tr>
+                    <!-- End of example items -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="cart-summary">
+            <h2>Cart Summary</h2>
+            <div class="summary-details">
+                <p>Subtotal: <span id="cart-subtotal">€270</span></p>
+                <p>Shipping: <span id="cart-shipping">€10</span></p>
+                <p><strong>Total: <span id="cart-total">€280</span></strong></p>
+            </div>
+            <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 RetroPixel. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

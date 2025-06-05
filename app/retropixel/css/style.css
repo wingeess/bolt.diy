@@ -1,0 +1,312 @@
+/* General Body Styles */
+body {
+    font-family: 'Press Start 2P', cursive; /* A common pixel font, needs to be imported or available */
+    margin: 0;
+    padding: 0;
+    background-color: #222; /* Dark background */
+    color: #fff; /* Light text */
+    line-height: 1.6;
+}
+
+/* Basic Link Styling */
+a {
+    color: #00ff00; /* Bright green for links */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff00ff; /* Magenta on hover */
+}
+
+/* Header and Logo */
+header {
+    background-color: #111; /* Slightly darker header */
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 3px solid #00ff00; /* Green accent line */
+}
+
+header .logo h1 {
+    font-size: 2.5em;
+    color: #ffcc00; /* Yellow for logo */
+    margin: 0;
+    text-shadow: 2px 2px #ff0000; /* Red shadow for retro effect */
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    border-color: #ff00ff;
+    color: #ff00ff;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto; /* Center content */
+    background-color: #333; /* Slightly lighter than body for contrast */
+    border: 3px solid #444;
+    box-shadow: 0 0 10px rgba(0,255,0,0.5); /* Green glow */
+}
+
+main h1, main h2 {
+    color: #ffcc00; /* Yellow for headings */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border: 2px dashed #555;
+}
+
+section h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #00ff00;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #1c1c1c;
+    border: 2px solid #00ff00;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.product-item h3 {
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 1em;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: #00ff00; /* Green button */
+    color: #111; /* Dark text on button */
+    padding: 10px 15px;
+    border: 2px solid #00cc00;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #ff00ff; /* Magenta on hover */
+    border-color: #cc00cc;
+    color: #fff;
+}
+
+/* Forms (basic styling) */
+form .filter-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #00ff00;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form input[type="range"] {
+    width: calc(100% - 22px); /* Full width minus padding/border */
+    padding: 8px;
+    background-color: #111;
+    border: 2px solid #00ff00;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+}
+
+form input[type="range"] {
+    padding: 0; /* Range input needs different padding */
+}
+
+/* Cart Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 2px solid #00ff00;
+    padding: 10px;
+    text-align: left;
+}
+
+.cart-table th {
+    background-color: #1a1a1a;
+    color: #ffcc00;
+}
+
+.cart-table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+.cart-table .remove-item {
+    background-color: #ff0000; /* Red for remove */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+}
+.cart-table .remove-item:hover {
+    background-color: #cc0000;
+}
+
+
+/* Cart Summary */
+#cart-summary {
+    background-color: #1c1c1c;
+    padding: 20px;
+    border: 2px solid #00ff00;
+}
+
+#cart-summary p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#cart-summary strong {
+    color: #ffcc00;
+}
+
+/* Product Details Page */
+#product-details {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.product-image-gallery {
+    flex: 1 1 400px; /* Flex properties for layout */
+}
+
+.product-image-gallery #main-product-image {
+    width: 100%;
+    max-width: 400px;
+    border: 3px solid #00ff00;
+}
+
+.product-info {
+    flex: 2 1 300px; /* Flex properties for layout */
+}
+
+.product-info .price {
+    font-size: 1.5em;
+    color: #00ff00;
+    margin: 15px 0;
+}
+
+.product-info input[type="number"] {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 3px solid #00ff00;
+    background-color: #111;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .logo h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #product-details {
+        flex-direction: column;
+    }
+
+    .product-image-gallery, .product-info {
+        flex: 1 1 auto; /* Reset flex basis */
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust base font size for small screens */
+    }
+    header .logo h1 {
+        font-size: 1.8em;
+    }
+    main h1 {
+        font-size: 1.5em;
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+}
+
+/*
+Note: The 'Press Start 2P' font needs to be available.
+You can add it via Google Fonts by putting this in the <head> of your HTML files:
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+This CSS provides a basic retro theme. Further refinements and specific component styling can be added.
+*/

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPixel - Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>RetroPixel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Product Catalog</h1>
+
+        <aside id="filters">
+            <h2>Filters</h2>
+            <form>
+                <div class="filter-group">
+                    <label for="console-filter">Console:</label>
+                    <select id="console-filter" name="console">
+                        <option value="all">All</option>
+                        <option value="snes">Super Nintendo</option>
+                        <option value="megadrive">Mega Drive</option>
+                        <option value="ps1">PlayStation 1</option>
+                        <option value="n64">Nintendo 64</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Max Price:</label>
+                    <input type="range" id="price-filter" name="price" min="0" max="500" value="500">
+                    <span id="price-value">€500</span>
+                </div>
+                <div class="filter-group">
+                    <label for="condition-filter">Condition:</label>
+                    <select id="condition-filter" name="condition">
+                        <option value="all">All</option>
+                        <option value="new">New</option>
+                        <option value="used-good">Used - Good</option>
+                        <option value="used-fair">Used - Fair</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Apply Filters</button>
+            </form>
+        </aside>
+
+        <section id="product-listing">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Placeholder for products -->
+                <div class="product-item">
+                    <img src="images/n64.jpg" alt="Nintendo 64"> <!-- Placeholder image -->
+                    <h3>Nintendo 64 Console</h3>
+                    <p>€180</p>
+                    <p>Condition: Used - Good</p>
+                    <a href="product.html?id=n64" class="btn">View Details</a>
+                    <button class="btn add-to-cart" data-id="n64">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/zelda_oot.jpg" alt="Zelda Ocarina of Time"> <!-- Placeholder image -->
+                    <h3>Zelda: Ocarina of Time (N64)</h3>
+                    <p>€60</p>
+                    <p>Condition: Used - Good</p>
+                    <a href="product.html?id=zelda_oot" class="btn">View Details</a>
+                    <button class="btn add-to-cart" data-id="zelda_oot">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/snes_sf2.jpg" alt="Street Fighter II SNES"> <!-- Placeholder image -->
+                    <h3>Street Fighter II (SNES)</h3>
+                    <p>€45</p>
+                    <p>Condition: New</p>
+                    <a href="product.html?id=snes_sf2" class="btn">View Details</a>
+                    <button class="btn add-to-cart" data-id="snes_sf2">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="images/ps1_ff7.jpg" alt="Final Fantasy VII PS1"> <!-- Placeholder image -->
+                    <h3>Final Fantasy VII (PS1)</h3>
+                    <p>€50</p>
+                    <p>Condition: Used - Fair</p>
+                    <a href="product.html?id=ps1_ff7" class="btn">View Details</a>
+                    <button class="btn add-to-cart" data-id="ps1_ff7">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 RetroPixel. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Basic script to update price display for the range input
+        const priceFilter = document.getElementById('price-filter');
+        const priceValue = document.getElementById('price-value');
+        if (priceFilter && priceValue) {
+            priceFilter.addEventListener('input', function() {
+                priceValue.textContent = `€${this.value}`;
+            });
+        }
+    </script>
+</body>
+</html>

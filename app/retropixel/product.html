@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroPixel - Product Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>RetroPixel</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-details">
+            <!-- Product details will be loaded here, possibly dynamically. -->
+            <!-- This is a generic structure. -->
+            <div class="product-image-gallery">
+                <img src="images/snes_console_large.jpg" alt="Super Nintendo Console (Main)" id="main-product-image">
+                <!-- Thumbnails could go here -->
+            </div>
+
+            <div class="product-info">
+                <h1 id="product-name">Super Nintendo Entertainment System</h1>
+                <p id="product-description">
+                    The Super Nintendo Entertainment System (SNES) is a 16-bit home video game console developed by Nintendo.
+                    Relive the classics with this iconic piece of gaming history. This unit is in excellent working condition.
+                </p>
+                <p class="price">Price: <span id="product-price">€150</span></p>
+                <div class="product-options">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+                </div>
+                <button id="add-to-cart-btn" class="btn add-to-cart" data-id="snes_console_detail">Add to Cart</button>
+            </div>
+        </section>
+
+        <section id="related-products">
+            <h2>Related Products</h2>
+            <p><em>AI-powered suggestions coming soon!</em></p>
+            <div class="product-grid">
+                <!-- Placeholder for related products -->
+                <div class="product-item">
+                    <img src="images/snes_mario_world.jpg" alt="Super Mario World"> <!-- Placeholder image -->
+                    <h3>Super Mario World (SNES)</h3>
+                    <p>€50</p>
+                    <a href="product.html?id=snes_mario_world" class="btn">View Details</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/snes_controller.jpg" alt="SNES Controller"> <!-- Placeholder image -->
+                    <h3>SNES Controller</h3>
+                    <p>€25</p>
+                    <a href="product.html?id=snes_controller" class="btn">View Details</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 RetroPixel. All rights reserved.</p>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
